@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,27 +12,31 @@
     android:orientation="vertical"
     android:weightSum="10">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/head_chat"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#2FB3FE">
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:weightSum="1">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView_chat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Chat"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <ScrollView
+        android:id="@+id/cus"
         android:layout_width="match_parent"
-        android:layout_height="528dp"
-        android:layout_weight="5.2">
+        android:layout_height="@dimen/_200sdp"
+        android:layout_below="@+id/head_chat">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -79,27 +83,22 @@
 
 
     </ScrollView>
-=======
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userRecycleView"
         android:layout_width="match_parent"
-        android:layout_height="528dp"
-        android:layout_weight="5.2"
+        android:layout_height="@dimen/_270sdp"
+        android:layout_below="@+id/cus"
         tools:listitem="@layout/user_list">
-
-
-
-
     </androidx.recyclerview.widget.RecyclerView>
->>>>>>> Stashed changes
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="0.8"
+        android:layout_alignParentBottom="true"
         android:background="@color/blue"
+        android:maxHeight="@dimen/_50sdp"
+        android:minHeight="@dimen/_45sdp"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_ad" />
-</LinearLayout>
+        app:menu="@menu/bottom_nav_ad"/>
+</RelativeLayout>

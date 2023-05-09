@@ -17,12 +17,7 @@ class ChucNangAdActivity : AppCompatActivity() {
         binding_chucnang_ad = ChucnangAdminBinding.inflate(layoutInflater)
         setContentView(binding_chucnang_ad.root)
 
-        binding_chucnang_ad.btnThemSp.setOnClickListener {
-            val intent = Intent(this@ChucNangAdActivity, ThemSpActivity::class.java)
-            startActivity(intent)
-            Animatoo.animateSlideLeft(this)
-            //finish()
-        }
+
 
         binding_chucnang_ad.btnThemSp.setOnClickListener {
             val intent = Intent(this@ChucNangAdActivity, ThemSpActivity::class.java)
@@ -30,26 +25,18 @@ class ChucNangAdActivity : AppCompatActivity() {
             Animatoo.animateSlideLeft(this)
             //finish()
         }
-        binding_chucnang_ad.btnXoaSp.setOnClickListener {
+        binding_chucnang_ad.btnSuaXoaSp.setOnClickListener {
             val intent = Intent(this@ChucNangAdActivity, XoaSpActivity::class.java)
             startActivity(intent)
             Animatoo.animateSlideLeft(this)
             //finish()
         }
-        binding_chucnang_ad.btnSuaSp.setOnClickListener {
-            val intent = Intent(this@ChucNangAdActivity, SuaSpActivity::class.java)
-            startActivity(intent)
-            Animatoo.animateSlideLeft(this)
-            //finish()
-        }
-
         binding_chucnang_ad.btnQuanLyKhachHang.setOnClickListener {
             val intent = Intent(this@ChucNangAdActivity, QuanLyKhachHangActivity::class.java)
             startActivity(intent)
             Animatoo.animateSlideLeft(this)
             //finish()
         }
-
         binding_chucnang_ad.btnQuanlydonhang.setOnClickListener {
             val intent = Intent(this@ChucNangAdActivity, QuanLyDonHangActivity::class.java)
             startActivity(intent)

@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:focusableInTouchMode="true"
     android:clickable="true"
     android:focusable="true"
-    android:orientation="vertical"
-    android:weightSum="10">
+    android:focusableInTouchMode="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/head_tk"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#2FB3FE">
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Thống kê"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout_tk"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:padding="@dimen/_10sdp"
-        android:weightSum="1">
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/head_tk">
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -69,15 +69,19 @@
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/bar_chart"
         android:layout_width="match_parent"
-        android:layout_height="458dp" />
+        android:layout_height="@dimen/_350sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_below="@+id/btn_doanhThu" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="0.8"
+        android:layout_alignParentBottom="true"
         android:background="@color/blue"
+        android:maxHeight="@dimen/_50sdp"
+        android:minHeight="@dimen/_45sdp"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_ad" />
-</LinearLayout>
+        app:menu="@menu/bottom_nav_ad"/>
+
+</RelativeLayout>

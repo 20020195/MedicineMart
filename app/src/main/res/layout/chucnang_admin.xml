@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,114 +12,87 @@
     android:orientation="vertical"
     android:weightSum="10">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/head_chucnang"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#2FB3FE">
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:weightSum="1">
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="178dp"
-            android:layout_height="45dp"
-            android:autoText="false"
-            android:background="#00FFFFFF"
+            android:id="@+id/textView_chucnang_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Chức năng"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="24sp"
+            android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.271" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <RelativeLayout
+        android:id="@+id/linearLayout_chucnang"
         android:layout_width="match_parent"
-        android:layout_height="528dp">
+        android:layout_height="@dimen/_470sdp"
+        android:layout_below="@+id/head_chucnang">
 
         <Button
             android:id="@+id/btn_them_sp"
-            android:layout_width="@dimen/_300sdp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
             android:background="@drawable/bg_button"
             android:text="Thêm sản phẩm"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.15" />
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
 
         <Button
-            android:id="@+id/btn_xoa_sp"
-            android:layout_width="@dimen/_300sdp"
+            android:id="@+id/btn_sua_xoa_sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_below="@+id/btn_them_sp"
             android:background="@drawable/bg_button"
-            android:text="Xóa sản phẩm"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.325" />
-
-        <Button
-            android:id="@+id/btn_sua_sp"
-            android:layout_width="@dimen/_300sdp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/bg_button"
-            android:text="Sửa sản phẩm"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.522" />
+            android:text="Sửa/Xóa sản phẩm"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btn_quan_ly_khach_hang"
-            android:layout_width="@dimen/_300sdp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_below="@+id/btn_sua_xoa_sp"
             android:background="@drawable/bg_button"
             android:text="Quản lý khách hàng"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.741" />
-            app:layout_constraintVertical_bias="0.706" />
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btn_quanlydonhang"
-            android:layout_width="@dimen/_300sdp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_below="@+id/btn_quan_ly_khach_hang"
             android:background="@drawable/bg_button"
             android:text="Quản lý đơn hàng"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.92" />
->>>>>>> Stashed changes
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="normal" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="0.8"
+        android:layout_alignParentBottom="true"
         android:background="@color/blue"
+        android:maxHeight="@dimen/_50sdp"
+        android:minHeight="@dimen/_45sdp"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_ad" />
-</LinearLayout>
+        app:menu="@menu/bottom_nav_ad"/>
+
+</RelativeLayout>
