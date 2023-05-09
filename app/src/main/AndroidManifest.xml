@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:noHistory="false"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedicineMart"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.DangNhapActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing|stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.DangKyActivity"/>
+        <activity android:name=".activities.TrangChuActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".activities.ThongBaoActivity"/>
+        <activity android:name=".activities.DonHangActivity"/>
+        <activity android:name=".activities.HoSoActivity"/>
+        <activity android:name=".activities.CartActivity"/>
+        <activity android:name=".activities.ChiTietSanPhamActivity"/>
+        <activity android:name=".activities.ThongTinTaiKhoanActivity"/>
+        <activity android:name=".activities.TrangChuAdActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".activities.ChatAdActivity"/>
+        <activity android:name=".activities.ThongKeAdActivity"/>
+        <activity android:name=".activities.ChucNangAdActivity"/>
+        <activity android:name=".activities.ThemSpActivity"/>
+        <activity android:name=".activities.XoaSpActivity"/>
+        <activity android:name=".activities.SuaSpActivity"/>
+        <activity android:name=".activities.QuanLyKhachHangActivity"/>
+        <activity android:name=".activities.QuanLyDonHangActivity"/>
+    </application>
+
+</manifest>
