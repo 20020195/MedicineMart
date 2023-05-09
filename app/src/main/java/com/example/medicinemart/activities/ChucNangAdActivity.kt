@@ -42,44 +42,40 @@ class ChucNangAdActivity : AppCompatActivity() {
             startActivity(intent)
             Animatoo.animateSlideLeft(this)
             //finish()
-
-        binding_chucnang_ad.bottomNavigationView.setSelectedItemId(R.id.chucnang)
-            val mOnNavigationItemSelectedListener =
-                BottomNavigationView.OnNavigationItemSelectedListener { item ->
-                    when (item.itemId) {
-                        R.id.home -> {
-                            // put your code here
-                            val intent =
-                                Intent(this@ChucNangAdActivity, TrangChuAdActivity::class.java)
-                            startActivity(intent)
-                            overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
-                            return@OnNavigationItemSelectedListener true
-                        }
-
-                        R.id.chat -> {
-                            // put your code here
-                            val intent = Intent(this@ChucNangAdActivity, ChatAdActivity::class.java)
-                            startActivity(intent)
-                            overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
-                            return@OnNavigationItemSelectedListener true
-                        }
-                        R.id.thongke -> {
-                            // put your code here
-                            val intent =
-                                Intent(this@ChucNangAdActivity, ThongKeAdActivity::class.java)
-                            startActivity(intent)
-                            overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
-                            return@OnNavigationItemSelectedListener true
-                        }
-                    }
-                    false
-                }
-
-            binding_chucnang_ad.bottomNavigationView.setOnNavigationItemSelectedListener(
-                mOnNavigationItemSelectedListener
-            )
-
         }
 
+        binding_chucnang_ad.bottomNavigationView.setSelectedItemId(R.id.chucnang)
+        val mOnNavigationItemSelectedListener =
+            BottomNavigationView.OnNavigationItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.home -> {
+                        // put your code here
+                        val intent = Intent(this@ChucNangAdActivity, TrangChuAdActivity::class.java)
+                        startActivity(intent)
+                        overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
+                        return@OnNavigationItemSelectedListener true
+                    }
+
+                    R.id.chat -> {
+                        // put your code here
+                        val intent = Intent(this@ChucNangAdActivity, ChatAdActivity::class.java)
+                        startActivity(intent)
+                        overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
+                        return@OnNavigationItemSelectedListener true
+                    }
+                    R.id.thongke -> {
+                        // put your code here
+                        val intent = Intent(this@ChucNangAdActivity, ThongKeAdActivity::class.java)
+                        startActivity(intent)
+                        overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
+                        return@OnNavigationItemSelectedListener true
+                    }
+                }
+                false
+            }
+
+        binding_chucnang_ad.bottomNavigationView.setOnNavigationItemSelectedListener(
+            mOnNavigationItemSelectedListener
+        )
     }
 }
